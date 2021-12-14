@@ -9,7 +9,7 @@ class Pokemon {
   factory Pokemon.fromJson(Map<dynamic, dynamic> json) {
     return Pokemon(
       name: json['name'],
-      image: json['sprites']['front_default'],
+      image: json['sprites']['other']['official-artwork']['front_default'],
       types: List.from(json['types']).map<String>((type) => type['type']['name']).toList(),
       id: json['id'],
     );
